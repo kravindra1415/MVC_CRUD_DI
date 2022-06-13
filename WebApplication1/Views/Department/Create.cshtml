@@ -1,0 +1,25 @@
+﻿@model Department
+
+<h1 class="text-success text-center">Craete New Department</h1>
+
+<form asp-controller="Department" asp-action="Create" method="post">
+    <table class="table table-bordered table-striped table-hover">
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td><input asp-for="Name" type="text" class="form-control" /></td>
+            </tr>
+
+            <tr>
+                <th>Description</th>
+                <td><input asp-for="Description" type="text" class="form-control" /></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-outline-primary btn-lg">Create Department</button>
+        <a asp-controller="Department" asp-action="Index" class="btn btn-outline-primary btn-lg">Back To Listing</a>
+    </div>
+</form>
